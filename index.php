@@ -12,14 +12,12 @@
   <link href="../css/style.css" rel="stylesheet">
   <!-- / -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-  <script src="../js/ajax.js"></script>
+  <!--Jquery-->
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+  <!--Ajax-->
+  <script src="ajax/ajax.js"></script>
 
-<<<<<<< HEAD:index.php
-   <?php require_once "autoload.php"; ?> 
-=======
-   <?php require_once "../autoload.php"; ?> 
->>>>>>> 5719641bc7c2c3bb566903a4eaf764a8eddd35d8:vista/index.php
+
 </head>
 <body>
 
@@ -27,20 +25,10 @@
     <div class="container">
         
     
-
-
-
-  <section class="content">
-      
-      <h1>Calculadora PHP - Ajax</h1>
-
+  <section class="content">      
     <div class="row">
-
-    
-      <!--=====================================
-      EL FORMULARIO
-      ======================================-->
-      <div class="col-lg-3 col-xs-12"></div>
+   
+         <div class="col-lg-3 col-xs-12"></div>
 
       
 
@@ -57,6 +45,9 @@
               <div class="box">
     <center>
         <form method="post" id="formulario">
+        <div>
+            <h1>Calculadora PHP - Ajax</h1>
+        </div>    
         <div class="form-group">
             <div class="input-group">
         <input type="number" class="form-control input-lg" name="variable1" placeholder="numero 1" required>
@@ -109,9 +100,10 @@
   </section>
 </div>
 </div>
-
+<!--Jquery-->
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
 </body>
 </html>
 
 
-<script src="../js/jquery-1.11.1.min.js"></script>
+
