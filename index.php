@@ -12,16 +12,14 @@
   <link href="../css/style.css" rel="stylesheet">
   <!-- / -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <!--Jquery-->
-<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-  <!--Ajax-->
-  <script src="ajax/ajax.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="../js/ajax.js"></script>
 
-
-   <?php //require_once "autoload.php"; ?> 
-
-   <?php //require_once "../autoload.php"; ?> 
-
+<<<<<<< HEAD:index.php
+   <?php require_once "autoload.php"; ?> 
+=======
+   <?php require_once "../autoload.php"; ?> 
+>>>>>>> 5719641bc7c2c3bb566903a4eaf764a8eddd35d8:vista/index.php
 </head>
 <body>
 
@@ -111,10 +109,9 @@
   </section>
 </div>
 </div>
-<!--Jquery-->
-<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+
 </body>
 </html>
 
 
-
+<script src="../js/jquery-1.11.1.min.js"></script>
