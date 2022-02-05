@@ -7,7 +7,7 @@
     $operador = $_POST["operador"];
     
     $query = "INSERT INTO calculadora.operaciones(numero1, numero2, operador, resultado) VALUES('$variable1', '$variable2', '$operador', '$result', '$date')"; 
-$result = pg_execute($con, $query) or die("Cannot execute query: $query\n");
+$result = pg_execute($dbconn, $query) or die("Cannot execute query: $query\n");
 if($result)
 {
      $data="Insert successfully"; 
@@ -17,15 +17,8 @@ else{
 
 }        
 echo $data;
-pg_free_result($data);
-pg_close($con);	
-	
-	
-	
-
-
-
-	$result=555;
+$resultado = $data;
+echo $resultado;
             //$query = "INSERT INTO calculadora.operaciones(numero1, numero2, operador, resultado) VALUES('$variable1', '$variable2', '$operador', '$result', '$date')";
 	    //if(!$result = pg_query($dbconn, $query)) {
 	       //exit(pg_error($dbconn));
@@ -33,7 +26,7 @@ pg_close($con);
 	    //$resultado = pg_query($dbconn, $query);
 		
 
-	    echo $resultado;	
+	    	
     //validacion de que no vengan vacios los campos
     /*if(($variable1 != null) && ($variable2 != null)){
         
