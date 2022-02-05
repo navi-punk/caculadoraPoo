@@ -5,6 +5,7 @@
     $variable1 = $_POST["variable1"];
     $variable2 = $_POST["variable2"];
     $operador = $_POST["operador"];
+echo $resultado = 'asdsad';	
 	$result=555;
             $query = "INSERT INTO calculadora.operaciones(numero1, numero2, operador, resultado) VALUES('$variable1', '$variable2', '$operador', '$result', '$date')";
 	    if(!$result = pg_query($dbconn, $query)) {
