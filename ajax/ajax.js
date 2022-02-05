@@ -38,8 +38,6 @@ $(document).on('ready',function(){
 
       $('#btn-ingresar').click(function(){
         var url = "controlador/calculadora.php";  
-        alert('ingreso');
-          addRecord();
         $.ajax({                        
            type: "POST",                 
            url: url,                    
