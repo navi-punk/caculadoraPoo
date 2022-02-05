@@ -36,6 +36,7 @@ function addRecord() {
 }   
 
 $(document).on('ready',function(){
+        readRecords();
 
       $('#btn-ingresar').click(function(){
         var url = "controlador/calculadora.php";  
