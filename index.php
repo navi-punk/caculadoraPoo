@@ -50,17 +50,17 @@
         </div>    
         <div class="form-group">
             <div class="input-group">
-        <input type="number" class="form-control input-lg" name="variable1" placeholder="numero 1" required>
+        <input type="number" class="form-control input-lg" name="variable1" id="variable1" placeholder="numero 1" required>
             </div>  
         </div>
         <div class="form-group">
             <div class="input-group">
-        <input type="number" class="form-control input-lg" name="variable2" placeholder="numero 2" required>
+        <input type="number" class="form-control input-lg" name="variable2" id="variable2" placeholder="numero 2" required>
             </div>  
         </div>
         <div class="form-group">
             <div class="input-group">
-        <select name="operador" class="form-control input-lg">
+        <select name="operador" id="operador" class="form-control input-lg">
             <option value="suma">suma</option>
             <option value="resta">resta</option>
             <option value="multi">multiplicacion</option>
@@ -71,7 +71,7 @@
         
         <div class="form-group">
             <div class="input-group">
-                <input id="resp" class="form-control input-lg" readonly>
+                <input id="resp" name="resp" class="form-control input-lg" readonly>
             </div>  
         </div>
         
