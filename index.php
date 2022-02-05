@@ -84,8 +84,6 @@
     <div class="col-md-12">
       <div id="records_content"></div>
     </div>
-
-
   </div>
 
     </center>
