@@ -6,9 +6,9 @@ function insertar($variable1,$variable2,$operador,$resp){
 	 $result = pg_query($dbconn, $query);
 		
 	if ($result === false) {
-		print pg_last_error($dbconn);
+		return pg_last_error($dbconn);
 	} else {
-		print 'everything was ok';
+		return 'everything was ok';
 	}
 }
 ?>
