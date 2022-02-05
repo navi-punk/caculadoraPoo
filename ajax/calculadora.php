@@ -8,10 +8,7 @@
 
 	    	
     //validacion de que no vengan vacios los campos
-    if(($variable1 != null) && ($variable2 != null)){
-        
-        
-        
+    if(($variable1 != null) && ($variable2 != null)){        
         //validacion que tipo de operacion trae
         if($operador == 'suma'){
             calcular::suma($variable1,$variable2);
@@ -61,7 +58,7 @@
 	 exit(pg_error($dbconn));
 	}
 	$resultado = pg_query($dbconn, $query);
-	echo $resultado;
+	//echo $resultado;
 		    
 	    }
     
