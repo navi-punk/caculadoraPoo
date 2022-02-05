@@ -14,8 +14,8 @@ $data = '<table class="table table-bordered table-striped">
 
 $query = "SELECT * FROM operaciones";
 
-if (!$result = pg_query($con, $query)) {
-	exit(pg_error($con));
+if (!$result = pg_query($dbconn, $query)) {
+	exit(pg_error($dbconn));
 }
 
 if(pg_num_rows($result) > 0)
