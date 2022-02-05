@@ -1,5 +1,5 @@
 <?php
-    require("agregarDatos.php");
+
 
 
     $variable1 = $_POST["variable1"];
