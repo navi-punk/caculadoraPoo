@@ -16,7 +16,7 @@ else{
     $data="Error"; 
 
 }        
-echo  json_encode($data);
+echo $data;
 pg_free_result($data);
 pg_close($con);	
 	
@@ -24,7 +24,7 @@ pg_close($con);
 	
 
 
-echo $data = 'asdsad';	
+
 	$result=555;
             //$query = "INSERT INTO calculadora.operaciones(numero1, numero2, operador, resultado) VALUES('$variable1', '$variable2', '$operador', '$result', '$date')";
 	    //if(!$result = pg_query($dbconn, $query)) {
