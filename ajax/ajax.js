@@ -9,7 +9,7 @@ $(document).on('ready',function(){
       readRecords();
 
       $('#btn-ingresar').click(function(){
-        var url = "calculadora.php";  
+        var url = "ajax/calculadora.php";  
         $.ajax({                        
            type: "POST",                 
            url: url,                    
