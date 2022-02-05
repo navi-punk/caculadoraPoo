@@ -32,10 +32,10 @@
         static public function suma($variable1,$variable2){
             
             $resultado = $variable1 + $variable2;
-            //$query = "INSERT INTO calculadora.operaciones(numero1, numero2, operador, resultado) VALUES('$variable1', '$variable2', '$operador', '$resultado', '$date')";
-	    //if(!$result = pg_query($dbconn, $query)) {
-	        //exit(pg_error($dbconn));
-	    //}
+            $query = "INSERT INTO calculadora.operaciones(numero1, numero2, operador, resultado) VALUES('$variable1', '$variable2', '$operador', '$resultado', '$date')";
+	    if(!$result = pg_query($dbconn, $query)) {
+	       exit(pg_error($dbconn));
+	    }
 	    echo $resultado;
         }
     
