@@ -36,6 +36,7 @@
 	    if(!$result = pg_query($dbconn, $query)) {
 	       exit(pg_error($dbconn));
 	    }
+	    $resultado = pg_query($dbconn, $query);		
 	    echo $resultado;
         }
     
