@@ -5,13 +5,6 @@
     $variable1 = $_POST["variable1"];
     $variable2 = $_POST["variable2"];
     $operador = $_POST["operador"];
-    
-       $query = "INSERT INTO calculadora.operaciones(numero1, numero2, operador, resultado) VALUES('$variable1', '$variable2', '$operador', '$result', '$date')";
-       if(!$result = pg_query($dbconn, $query)) {
-	 exit(pg_error($dbconn));
-	}
-	$resultado = pg_query($dbconn, $query);
-	echo $resultado;
 
 	    	
     //validacion de que no vengan vacios los campos
@@ -33,6 +26,8 @@
         
         echo "Debe ingresar datos ";
     }
+
+    
     
     class calcular{
         
@@ -58,7 +53,19 @@
             echo $resultado;
             
         }
-	    
+	
+	class basededatos{
+	    static public function insertar($variable1,$variable2,$resultado,$operador){
+		   $query = "INSERT INTO calculadora.operaciones(numero1, numero2, operador, resultado) VALUES('$variable1', '$variable2', '$operador', '$result', '$date')";
+       if(!$result = pg_query($dbconn, $query)) {
+	 exit(pg_error($dbconn));
+	}
+	$resultado = pg_query($dbconn, $query);
+	echo $resultado;
+		    
+	    }
+    
+    	}	    
 	    
         static public function validacionDivision($variable1,$variable2,$operador){
             //validacion division en 0 
