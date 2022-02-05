@@ -1,7 +1,7 @@
 <?php
 	
 		include("conection.php");
-
+		echo "INSERT";
 		// get values
 
 		$variable1 = $_POST['variable1'];
