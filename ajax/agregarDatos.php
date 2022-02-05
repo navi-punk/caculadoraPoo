@@ -2,7 +2,7 @@
 	if(isset($_POST['resp']))
 	{
 
-		include("conexion.php");
+		include("conection.php");
 
 		// get values
 
