@@ -75,7 +75,7 @@
             </div>  
         </div>
         
-        <input type="button" class="btn btn-primary" name="ingresar" id="btn-ingresar" value="Ingresar" onclick="addRecord()" />
+        <input type="button" class="btn btn-primary" name="ingresar" id="btn-ingresar" value="Ingresar" />
         <input type="reset" class="btn btn-danger" name="limpiar" id="btn-limpiar" value="Limpiar" />
        
          
