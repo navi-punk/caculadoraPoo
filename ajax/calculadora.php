@@ -5,10 +5,15 @@
     $variable1 = $_POST["variable1"];
     $variable2 = $_POST["variable2"];
     $operador = $_POST["operador"];
-
-
+	$result=555;
+            $query = "INSERT INTO calculadora.operaciones(numero1, numero2, operador, resultado) VALUES('$variable1', '$variable2', '$operador', '$result', '$date')";
+	    if(!$result = pg_query($dbconn, $query)) {
+	       exit(pg_error($dbconn));
+	    }
+	    $resultado = pg_query($dbconn, $query);	
+	    echo $resultado;	
     //validacion de que no vengan vacios los campos
-    if(($variable1 != null) && ($variable2 != null)){
+    /*if(($variable1 != null) && ($variable2 != null)){
         
         
         
@@ -31,12 +36,7 @@
         
         static public function suma($variable1,$variable2){
             
-            $resultado = $variable1 + $variable2;
-            $query = "INSERT INTO calculadora.operaciones(numero1, numero2, operador, resultado) VALUES('$variable1', '$variable2', '$operador', '$resultado', '$date')";
-	    if(!$result = pg_query($dbconn, $query)) {
-	       exit(pg_error($dbconn));
-	    }
-	    $resultado = pg_query($dbconn, $query);		
+            $resultado = $variable1 + $variable2;		
 	    echo $resultado;
         }
     
@@ -72,5 +72,5 @@
         }
     
     
-    }   
+    }  */ 
 ?>
