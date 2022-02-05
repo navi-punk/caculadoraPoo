@@ -6,7 +6,7 @@ function readRecords() {
         
    // Add Record
 function addRecord() {
-
+       alert('enviar datos');
     var variable1 = $("#variable1").val();
     var variable2 = $("#variable2").val();
     var operador = $("#operador").val();
@@ -20,8 +20,6 @@ function addRecord() {
         operador: operador,
         resp:resp
     }, function (data, status) {
-        // close the popup
-        $("#add_new_record_modal").modal("hide");
 
         // read records again
         readRecords();
