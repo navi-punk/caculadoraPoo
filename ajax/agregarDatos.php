@@ -10,7 +10,7 @@
 	    	$resp = $_POST['resp'];
 
 		
-		$query = "INSERT INTO operaciones(numero1, numero2, operador, resultado) VALUES(1, 3, mult, 3)";
+		$query = "INSERT INTO calculadora.operaciones(numero1, numero2, operador, resultado) VALUES(1, 3, mult, 3)";
 		$result = pg_query($dbconn, $query);
 		
 		if ($result === false) {
