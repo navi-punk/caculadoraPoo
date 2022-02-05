@@ -1,5 +1,6 @@
 <?php
     include("conection.php");
+    include("agregarDatos.php");
 
     // get values
     $variable1 = $_POST["variable1"];
