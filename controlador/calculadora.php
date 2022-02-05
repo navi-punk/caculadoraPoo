@@ -1,5 +1,5 @@
 <?php
-    include("conection.php");
+    include("ajax/conection.php");
 
     // get values
     $variable1 = $_POST["variable1"];
