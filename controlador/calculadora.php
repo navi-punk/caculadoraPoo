@@ -1,28 +1,21 @@
 <?php
     include("conection.php");
 
-		// get values
-
-		$variable1 = $_POST['variable1'];
-		$variable2 = $_POST['variable2'];
-        $operador = $_POST['operador'];
-        $resp = $_POST['resp'];
-
+    // get values
+    $variable1 = $_POST["variable1"];
+    $variable2 = $_POST["variable2"];
+    $operador = $_POST["operador"];
+    $resp = $_POST["resp"];
 
 
-		$query = "INSERT INTO operaciones(numero1, numero2, operador, resultado) VALUES('$variable1', '$variable2', '$operador', '$resp', '$date')";
+    //validacion de que no vengan vacios los campos
+    if(($variable1 != null) && ($variable2 != null)){
+	    
+	    $query = "INSERT INTO operaciones(numero1, numero2, operador, resultado) VALUES('$variable1', '$variable2', '$operador', '$resp', '$date')";
 		if (!$result = pg_query($dbconn, $query)) {
 	        exit(pg_error($dbconn));
 	    }
 	    echo "1 Record Added!";
-
-    //captura de datos 
-    $variable1 = $_POST["variable1"];
-    $variable2 = $_POST["variable2"];
-    $operador = $_POST["operador"];
-    
-    //validacion de que no vengan vacios los campos
-    if(($variable1 != null) && ($variable2 != null)){
         
         //validacion que tipo de operacion trae
         if($operador == 'suma'){
