@@ -14,14 +14,14 @@ $data = '<table class="table table-bordered table-striped">
 
 $query = "SELECT * FROM operaciones";
 
-if (!$result = mysqli_query($con, $query)) {
-	exit(mysqli_error($con));
+if (!$result = pg_query($con, $query)) {
+	exit(pg_error($con));
 }
 
-if(mysqli_num_rows($result) > 0)
+if(pg_num_rows($result) > 0)
 {
 
-while($row = mysqli_fetch_assoc($result))
+while($row = pg_fetch_assoc($result))
 {
 $data .= '<tr>
 	<td>'.$row['id'].'</td>
