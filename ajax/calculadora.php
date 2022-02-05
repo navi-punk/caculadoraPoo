@@ -12,8 +12,7 @@
     if(($variable1 != null) && ($variable2 != null)){        
         //validacion que tipo de operacion trae
         if($operador == 'suma'){
-            $resp = calcular::suma($variable1,$variable2);
-	    basededatos::insertar($variable1,$variable2,$operador,$resp);	
+            $resp = calcular::suma($variable1,$variable2);	
         }elseif($operador == 'resta'){
             calcular::resta($variable1,$variable2);
         }elseif($operador == 'multi'){
@@ -78,5 +77,16 @@
         }
     
     
-    }   
+    }
+
+	function insertar(){
+		 $query = "INSERT INTO calculadora.operaciones(numero1, numero2, operador, resultado) VALUES(3, 2, 'suma', 5)";
+		 $result = pg_query($dbconn, $query);
+	         if ($result === false) {
+			$resultado = pg_last_error($dbconn);
+		} else {
+			$resultado = 'everything was ok';
+		}		
+		 //echo $resultado;	
+	}
 ?>
