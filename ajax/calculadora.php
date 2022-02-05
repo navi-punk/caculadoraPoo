@@ -20,7 +20,7 @@
         }elseif($operador == 'divi'){
             calcular::validacionDivision($variable1,$variable2,$operador);
         }
-	insertar();    
+	   
     }else{        
         echo "Debe ingresar datos ";
     }
@@ -42,9 +42,9 @@
     class calcular{
         
         static public function suma($variable1,$variable2){
-            $resultado = $variable1 + $variable2;
-	    //basededatos::insertar($variable1,$variable2,$operador,$resultado);	
-	    echo $resultado;
+            $resultado = $variable1 + $variable2;	
+	    insertar(); 	
+	    echo $resultado;		
         }
     
         static public function resta($variable1,$variable2){
