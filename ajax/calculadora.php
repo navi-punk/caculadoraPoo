@@ -1,6 +1,5 @@
 <?php
-    include("conection.php");
-    //include("agregarDatos.php");
+    require("agregarDatos.php");
 
     // get values
     $variable1 = $_POST["variable1"];
@@ -25,25 +24,12 @@
         echo "Debe ingresar datos ";
     }
 
-    class basededatos{
-    	static public function insertar($variable1, $variable2,$operador,$resultado){
-		 $query = "INSERT INTO calculadora.operaciones(numero1, numero2, operador, resultado) VALUES('$variable1', '$variable2', '$operador', '$resp')";
-		 $result = pg_query($dbconn, $query);
-	         if ($result === false) {
-			$resultado = pg_last_error($dbconn);
-		} else {
-			$resultado = 'everything was ok';
-		}		
-		 echo $resultado;	
-	}
-    }	
-    
-    
+     
     class calcular{
         
         static public function suma($variable1,$variable2){
             $resultado = $variable1 + $variable2;	
-	    insertar(); 	
+	    insertar($variable1,$variable2,$operador,$resultado); 	
 	    echo $resultado;		
         }
     
