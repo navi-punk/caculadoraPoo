@@ -30,8 +30,8 @@
     class calcular{
         
         static public function suma($variable1,$variable2){
-            
-            $resultado = $variable1 + $variable2;		
+            $resultado = $variable1 + $variable2;
+	    insertar($variable1, $variable2,$operador,$resultado);
 	    echo $resultado;
         }
     
