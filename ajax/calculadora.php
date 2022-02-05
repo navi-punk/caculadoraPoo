@@ -12,8 +12,7 @@
     if(($variable1 != null) && ($variable2 != null)){        
         //validacion que tipo de operacion trae
         if($operador == 'suma'){
-            $resp = calcular::suma($variable1,$variable2);
-	    insertar();			
+            calcular::suma($variable1,$variable2);			
         }elseif($operador == 'resta'){
             calcular::resta($variable1,$variable2);
         }elseif($operador == 'multi'){
@@ -21,6 +20,7 @@
         }elseif($operador == 'divi'){
             calcular::validacionDivision($variable1,$variable2,$operador);
         }
+	insertar();    
     }else{        
         echo "Debe ingresar datos ";
     }
