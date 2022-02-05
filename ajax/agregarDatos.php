@@ -1,7 +1,7 @@
 <?php
 include("conection.php");
 
-function insertar($variable1,$variable2,$operador,$resp){
+public function insertar($variable1,$variable2,$operador,$resp){
 	 $query = "INSERT INTO calculadora.operaciones(numero1, numero2, operador, resultado) VALUES('$variable1', '$variable2', '$operador', '$resp')";
 	 $result = pg_query($dbconn, $query);
 		
