@@ -15,4 +15,10 @@
            }
          });
       });
+        
+    function readRecords() {
+        $.get("ajax/listaResultados.php", {}, function (data, status) {
+            $("#records_content").html(data);
+        });
+    }
     });
