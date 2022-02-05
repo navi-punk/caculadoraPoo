@@ -14,8 +14,8 @@
 
 
 		$query = "INSERT INTO operaciones(numero1, numero2, operador, resultado) VALUES('$variable1', '$variable2', '$operador', '$resp', '$date')";
-		if (!$result = pg_query($con, $query)) {
-	        exit(pg_error($con));
+		if (!$result = pg_query($dbconn, $query)) {
+	        exit(pg_error($dbconn));
 	    }
 	    echo "1 Record Added!";
 	}
