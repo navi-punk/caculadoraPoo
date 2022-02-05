@@ -11,10 +11,7 @@
     //validacion de que no vengan vacios los campos
     if(($variable1 != null) && ($variable2 != null)){
         
-        $query = "INSERT INTO calculadora.operaciones(numero1, numero2, operador, resultado) VALUES('$variable1', '$variable2', '$operador', '$resp', '$date')";
-		if (!$result = pg_query($dbconn, $query)) {
-	        exit(pg_error($dbconn));
-	    }
+        
         
         //validacion que tipo de operacion trae
         if($operador == 'suma'){
@@ -55,6 +52,11 @@
             echo $resultado;
             
         }
+	$query = "INSERT INTO calculadora.operaciones(numero1, numero2, operador, resultado) VALUES('$variable1', '$variable2', '$operador', '$resultado', '$date')";
+		if (!$result = pg_query($dbconn, $query)) {
+	        exit(pg_error($dbconn));
+	    }    
+	    
         static public function validacionDivision($variable1,$variable2,$operador){
             //validacion division en 0 
             if($variable2 == 0 && $operador == 'divi'){
