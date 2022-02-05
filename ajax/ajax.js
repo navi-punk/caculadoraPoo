@@ -1,3 +1,9 @@
+error: function (xhr, ajaxOptions, thrownError) {
+           console.log(xhr.status);
+           console.log(xhr.responseText);
+           console.log(thrownError);
+       }
+
 function readRecords() {
         $.get("ajax/listaResultados.php", {}, function (data, status) {
             $("#records_content").html(data);
@@ -47,6 +53,11 @@ $(document).on('ready',function(){
              //$('#resp').html(data);
              document.getElementById("resp").value = data;
              console.log('Datos'.data);
+                   error: function (xhr, ajaxOptions, thrownError) {
+           console.log(xhr.status);
+           console.log(xhr.responseText);
+           console.log(thrownError);
+       }
            }
          });
       });
