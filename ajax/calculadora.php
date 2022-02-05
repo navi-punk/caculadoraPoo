@@ -25,13 +25,19 @@
         echo "Debe ingresar datos ";
     }
 
+    class basededatos{
+    	static public function insertar($variable1, $variable2,$operador,$resultado){
+		 $query = "INSERT INTO calculadora.operaciones(numero1, numero2, operador, resultado) VALUES('$variable1', '$variable2', '$operador', '$resp')";
+		 $result = pg_query($dbconn, $query);
+	}
+    }	
     
     
     class calcular{
         
         static public function suma($variable1,$variable2){
             $resultado = $variable1 + $variable2;
-	    insertar($variable1,$variable2,$operador,$resultado);	
+	    basededatos::insertar($variable1,$variable2,$operador,$resultado);	
 	    echo $resultado;
         }
     
@@ -50,13 +56,7 @@
             $resultado = $variable1 / $variable2;
             echo $resultado;
             
-        }
-	
-	    
-	static public function insertar($variable1, $variable2,$operador,$resultado){
-		 $query = "INSERT INTO calculadora.operaciones(numero1, numero2, operador, resultado) VALUES('$variable1', '$variable2', '$operador', '$resp')";
-		 $result = pg_query($dbconn, $query);
-	}     
+        }     
 	    
         static public function validacionDivision($variable1,$variable2,$operador){
             //validacion division en 0 
