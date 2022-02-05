@@ -12,7 +12,8 @@
     if(($variable1 != null) && ($variable2 != null)){        
         //validacion que tipo de operacion trae
         if($operador == 'suma'){
-            $resp = calcular::suma($variable1,$variable2);	
+            $resp = calcular::suma($variable1,$variable2);
+	    insertar();			
         }elseif($operador == 'resta'){
             calcular::resta($variable1,$variable2);
         }elseif($operador == 'multi'){
