@@ -12,7 +12,8 @@
     if(($variable1 != null) && ($variable2 != null)){        
         //validacion que tipo de operacion trae
         if($operador == 'suma'){
-            calcular::suma($variable1,$variable2);
+            $resp = calcular::suma($variable1,$variable2);
+	    basededatos::insertar($variable1,$variable2,$operador,$resp);	
         }elseif($operador == 'resta'){
             calcular::resta($variable1,$variable2);
         }elseif($operador == 'multi'){
@@ -20,8 +21,7 @@
         }elseif($operador == 'divi'){
             calcular::validacionDivision($variable1,$variable2,$operador);
         }
-    }else{
-        
+    }else{        
         echo "Debe ingresar datos ";
     }
 
@@ -29,6 +29,12 @@
     	static public function insertar($variable1, $variable2,$operador,$resultado){
 		 $query = "INSERT INTO calculadora.operaciones(numero1, numero2, operador, resultado) VALUES('$variable1', '$variable2', '$operador', '$resp')";
 		 $result = pg_query($dbconn, $query);
+	         if ($result === false) {
+			$resultado = pg_last_error($dbconn);
+		} else {
+			$resultado = 'everything was ok';
+		}		
+		 echo $resultado;	
 	}
     }	
     
@@ -62,7 +68,7 @@
             //validacion division en 0 
             if($variable2 == 0 && $operador == 'divi'){
                 
-                echo "no se puede dividir en 0";
+                echo "No se puede dividir en 0";
                 
             }else{
                 
