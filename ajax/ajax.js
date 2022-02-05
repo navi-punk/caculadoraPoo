@@ -1,9 +1,3 @@
-error: function (xhr, ajaxOptions, thrownError) {
-           console.log(xhr.status);
-           console.log(xhr.responseText);
-           console.log(thrownError);
-       }
-
 function readRecords() {
         $.get("ajax/listaResultados.php", {}, function (data, status) {
             $("#records_content").html(data);
@@ -12,7 +6,7 @@ function readRecords() {
         
    // Add Record
 function addRecord() {
-       alert('enviar datos');
+    alert('enviar datos');
     var variable1 = $("#variable1").val();
     var variable2 = $("#variable2").val();
     var operador = $("#operador").val();
@@ -40,7 +34,7 @@ function addRecord() {
 }   
 
 $(document).on('ready',function(){
-        readRecords();
+      readRecords();
 
       $('#btn-ingresar').click(function(){
         var url = "controlador/calculadora.php";  
@@ -53,10 +47,6 @@ $(document).on('ready',function(){
              //$('#resp').html(data);
              document.getElementById("resp").value = data;
              console.log('Datos'.data);
-                   error: function (xhr, ajaxOptions, thrownError) {
-           console.log(xhr.status);
-           console.log(xhr.responseText);
-           console.log(thrownError);
        }
            }
          });
