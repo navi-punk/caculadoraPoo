@@ -12,7 +12,7 @@ $data = '<table class="table table-bordered table-striped">
       <th>Resultado</th>
 		</tr>';
 
-$query = "SELECT * FROM operaciones";
+$query = "SELECT * FROM calculadora.operaciones";
 
 if (!$result = pg_query($dbconn, $query)) {
 	exit(pg_error($dbconn));
